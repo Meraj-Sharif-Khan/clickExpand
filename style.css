@@ -1,0 +1,144 @@
+*,*::after,*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.nav{
+background-color: rgba(255, 255, 255, 0.1);
+height: 50px;
+margin: 0 20px 20px 20px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 0 0 5px 5px;
+
+}
+
+.nav--title{
+font-size: 1rem;
+font-weight: 700;
+color: #fff;
+}
+
+@media screen and (min-width: 720px) {
+    
+    .nav--title{
+    font-size: 1.5rem;
+   
+    }
+    
+}
+
+.expand-container{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid red; */
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+}
+
+@media screen and (min-width:720px) {
+    .expand-container{
+        flex-direction: row;
+    }
+    
+}
+
+.pizza{
+    position: relative;
+    cursor: pointer;
+}
+
+
+.pizza--img{
+    border-radius: 5px;
+    height: 50px;
+    width: 200px;
+    object-fit: cover;
+    transition: all 500ms ease-in-out;
+}
+
+.img__active{
+    height: 200px;
+}
+
+.img__active ~ .pizza--text{
+    opacity: 1;
+    height: 20%;
+}
+@media screen and (min-width:720px) {
+    .pizza--img{
+        height: 400px;
+        width: 100px;
+    }
+    .img__active{
+        width:  400px;
+    }
+    
+}
+
+
+.pizza--text{
+    opacity: 0;
+    height: 0;
+    position: absolute;
+    bottom:0;
+    padding: 3px;
+    text-shadow: 1px 1px 1px  rgba(0, 0, 0, 0.5);
+    transition: all 0.5s ease-in-out 0.05s;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    overflow: hidden;
+
+}
+
+.pizza--title{
+    font-size: 0.6rem;
+    color: beige;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.pizza--ingredient{
+    font-size: 0.5rem;
+    color: beige;
+
+}
+
+
+@media screen and (min-width: 720px) {
+    .pizza--title{
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    
+    .pizza--ingredient{
+        font-size: 1rem;
+    
+    }
+    
+
+
+}
+
+/* attribution */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: aqua;
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+  }
+  .attribution a {
+    color: #fff;
+  }
